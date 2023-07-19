@@ -21,7 +21,7 @@ try{
 require('./models/todoModel')
 const todoRouter = require('./routes/todoRoutes');
 app.use(cors());
-app.use('/todos', todoRouter)
+app.use('https://todolistapp-yo5k.onrender.com/todos', todoRouter)
 
 
 app.listen(port, ()=>{
