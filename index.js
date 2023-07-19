@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 try{
-    mongoose.connect(process.env.CONNECTION_STR, { useNewUrlParser: true });
+    mongoose.connect("mongodb+srv://amritamathur:admin@cluster0.7d4xbmx.mongodb.net/todos_db?retryWrites=true&w=majority", { useNewUrlParser: true });
     console.log("connected with db")
 }catch(error){
     console.log(error);
