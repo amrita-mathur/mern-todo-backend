@@ -20,7 +20,10 @@ try{
 require('./models/todoModel')
 const todoRouter = require('./routes/todoRoutes');
 app.use(cors());
-app.use('https://todolistapp-yo5k.onrender.com/todos', todoRouter)
+app.use('/todos', todoRouter);
+app.get('/', (req,res)=>{
+    res.send("Connected to Todo App");
+})
 
 
 app.listen(port, ()=>{
